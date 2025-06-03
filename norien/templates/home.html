@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container mt-4 position-relative">
+  <div class="position-absolute top-0 end-0 mt-3 me-3">
+    <img src="{{ url_for('static', filename='images/' ~ user.profile_pic) }}" 
+     alt="Profile Picture" 
+     style="width: 100px; height: 100px; object-fit: cover; border: 2px solid #ccc;">
+  </div>
+
+  <div class="mt-5 pt-3">
+    <h3>{{ user.name }}</h3>
+    <p><strong>{{ age }} </strong> Years Old </p>
+    <p><strong>{{ user.address }}</strong></p>
+  </div>
+</div>
+{% endblock %}
